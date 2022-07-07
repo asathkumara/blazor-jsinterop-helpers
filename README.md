@@ -66,14 +66,14 @@ Finally, inject instances of the service as needed in your razor component in yo
 
 ## Documentation
 
-[WindowHandler](#windowhandler)
-  -- [Models](#models)
-  -- [Events](#events)
-  -- [Methods](#methods)
-[ElementHandler](#elementhandler)
-  -- [Methods](#methods-1)
-[Examples](#examples)
-  -- [Alert on window resize event](#alert-when-window-resizes)
+[WindowHandler](#windowhandler)</br>
+  -- [Models](#models)</br>
+  -- [Events](#events)</br>
+  -- [Methods](#methods)</br>
+[ElementHandler](#elementhandler)</br>
+  -- [Methods](#methods-1)</br>
+[Examples](#examples)</br>
+  -- [Alert on window resize event](#alert-when-window-resizes)</br>
   -- [Focus an element](#focus-an-element)
 
 ### WindowHandler
@@ -319,4 +319,4 @@ Focus an element when a button is clicked. The component reference is bound and 
 
 ## License
 
-This project is licensed under [MIT](https://github.com/asathkumara/dotnet-blazor-poker/blob/master/LICENSE). Feel free to re-use any libraries or code for **non-commercial use** but do your due diligence with attributing credit.
+This project is licensed under [MIT](https://github.com/asathkumara/blazor-jsinterop-helpers/blob/master/LICENSE.txt). Feel free to re-use any libraries or code for **non-commercial use** but do your due diligence with attributing credit.
