@@ -77,7 +77,7 @@ Finally, inject instances of the service as needed in your razor component in yo
   -- [Focus an element](#focus-an-element)
 
 ### WindowHandler
-Namespace: Blazor.JSInterop.Helpers.Services
+Namespace: Blazor.JSInterop.Helpers.Services</br>
 Inheritance: IWindowHandler &#8594; WindowHandler
 
 Contains event handlers and methods to interact with the DOM's Window API
@@ -185,7 +185,7 @@ Namespace: Blazor.JSInterop.Helpers.Models
 
 ### ElementHandler
 
-Namespace: Blazor.JSInterop.Helpers.Services
+Namespace: Blazor.JSInterop.Helpers.Services</br>
 Inheritance: IElementHandler &#8594; ElementHandler
 
 Contains methods to interact with the DOM's Element API.
