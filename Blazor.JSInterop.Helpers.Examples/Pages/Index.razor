@@ -1,0 +1,36 @@
+﻿@page "/"
+@implements IDisposable
+@inject IElementHandler elementHandler
+@inject IWindowHandler window
+
+<PageTitle>Index</PageTitle>
+
+<h1 @ref=@_headingRef>Hello, world!</h1>
+
+<button @onclick=@FocusHeadingOne>Focus Heading One</button>
+
+@code
+{
+    ElementReference _headingRef;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await window.RegisterEventHandlers();
+        window.OnResize += OnResizeHandler;
+    }
+
+    private async void OnResizeHandler(object sender, WindowEventArgs windowEventArgs)
+    {
+        await window.AlertAsync("The window was resized!");
+    }
+
+    private async void FocusHeadingOne()
+    {
+        await elementHandler.FocusAsync(_headingRef);
+    }
+
+    public void Dispose()
+    {
+        window.OnResize -= OnResizeHandler;
+    }
+}
