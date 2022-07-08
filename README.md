@@ -21,7 +21,7 @@ When building robust and complex razor components using Blazor, interactions wit
 Package Manager
 
 ```powershell
-Install-Package Blazor.JSInterop.Handlers -Version 1.0.0
+Install-Package Blazor.JSInterop.Handlers -Version 1.0.1
 ```
 
 .NET CLI
@@ -33,7 +33,7 @@ dotnet add package Blazor.JSInterop.Handlers
 PackageReference
 
 ```xml
-<PackageReference Include="Blazor.JSInterop.Handlers" Version="1.0.0">
+<PackageReference Include="Blazor.JSInterop.Handlers" Version="1.0.1">
 ```
 
 ## Usage
