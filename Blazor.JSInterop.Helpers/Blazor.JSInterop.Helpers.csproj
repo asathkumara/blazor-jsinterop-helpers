@@ -1,23 +1,32 @@
-<Project Sdk="Microsoft.NET.Sdk.Razor">
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Authors>github.com/asathkumara</Authors>
+    <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
+    <Authors>asathkumara</Authors>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageProjectUrl>https://github.com/asathkumara/blazor-jsinterop-helpers</PackageProjectUrl>
+    <Description>A package that extends the JSInterop in Blazor through helpers for interacting with the DOM's Window and Element APIs.</Description>
+    <RepositoryUrl>https://github.com/asathkumara/blazor-jsinterop-helpers</RepositoryUrl>
+    <PackageTags>blazor; jsinterop; helpers;</PackageTags>
+    <PackageIcon>blazor-interop-handlers-logo.png</PackageIcon>
+    <PackageReleaseNotes>Initial release with Window and Element handlers.</PackageReleaseNotes>
+	  <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+	  <Version>1.1.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Remove="wwwroot\elementHandler.js" />
-    <Content Remove="wwwroot\windowHandler.js" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="wwwroot\windowHandler.js" />
-    <None Include="wwwroot\elementHandler.js">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+	  <None Include="LICENSE.txt" Pack="true" PackagePath="\" />
+    <None Include="..\..\..\..\..\..\Downloads\blazor-interop-handlers-logo.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
     </None>
   </ItemGroup>
 
@@ -28,6 +37,21 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="6.0.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="wwwroot\scripts\elementHandler.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\scripts\elementHandler.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\scripts\windowHandler.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\scripts\windowHandler.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
 </Project>

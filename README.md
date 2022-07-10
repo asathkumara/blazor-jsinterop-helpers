@@ -19,7 +19,7 @@ When building robust and complex razor components using Blazor, interactions wit
 Package Manager
 
 ```powershell
-Install-Package Blazor.JSInterop.Handlers -Version 1.0.0
+Install-Package Blazor.JSInterop.Handlers -Version 1.0.1
 ```
 
 .NET CLI
@@ -31,7 +31,7 @@ dotnet add package Blazor.JSInterop.Handlers
 PackageReference
 
 ```xml
-<PackageReference Include="Blazor.JSInterop.Handlers" Version="1.0.0">
+<PackageReference Include="Blazor.JSInterop.Handlers" Version="1.0.1">
 ```
 
 ## Usage
@@ -66,170 +66,81 @@ Finally, inject instances of the service as needed in your razor component in yo
 
 ## Documentation
 
-[WindowHandler](#windowhandler)</br>
-  -- [Models](#models)</br>
-  -- [Events](#events)</br>
-  -- [Methods](#methods)</br>
-[ElementHandler](#elementhandler)</br>
-  -- [Methods](#methods-1)</br>
-[Examples](#examples)</br>
-  -- [Alert on window resize event](#alert-when-window-resizes)</br>
+[WindowHandler](#windowhandler)\
+  -- [Models](#models)\
+  -- [Events](#events)\
+  -- [Methods](#methods)\
+[ElementHandler](#elementhandler)\
+  -- [Methods](#methods-1)\
+[Examples](#examples)\
+  -- [Alert on window resize event](#alert-when-window-resizes)\
   -- [Focus an element](#focus-an-element)
 
 ### WindowHandler
-Namespace: Blazor.JSInterop.Helpers.Services</br>
+Namespace: Blazor.JSInterop.Helpers.Services\
 Inheritance: IWindowHandler &#8594; WindowHandler
 
 Contains event handlers and methods to interact with the DOM's Window API
 
 #### Models
 Namespace: Blazor.JSInterop.Helpers.Models
-<table>
-    <tr>
-        <td>Screen</td>
-        <td>Contains information about the Screen</td>
-    </tr>
-    <tr>
-        <td>ScreenOrientation</td>
-        <td>Contains information about the screen's orientation</td>
-    </tr>
-    <tr>
-        <td>Theme</td>
-        <td>Contains information about the user's preferred theme</td>
-    </tr>
-    <tr>
-        <td>WindowDimensions</td>
-        <td>Contains information about the window's dimensions</td>
-    </tr>
-    <tr>
-        <td>WindowEventArgs</td>
-        <td>Contains information about the window event</td>
-    </tr>
-</table>
+
+|  |  |
+|---|---|
+| Screen | Contains information about the Screen |
+| ScreenOrientation | Contains information about the screen's orientation |
+| Theme | Contains information about the user's preferred theme |
+| WindowDimensions | Contains information about the window's dimensions |
+| WindowEventArgs | Contains information about the window event |
 
 #### Events
 
-<table>
-    <tr>
-        <td>EventHandler&lt;WindowEventArgs&gt; OnResize</td>
-        <td>Fires when the window resizes</td>
-    </tr>
-    <tr>
-        <td>EventHandler&lt;WindowEventArgs&gt; OnOrientationChange</td>
-        <td>Fires when the screen's orientation changes</td>
-    </tr>
-</table>
+|  |  |
+|---|---|
+| EventHandler<WindowEventArgs> OnResize | Fires when the window resizes |
+| EventHandler<WindowEventArgs> OnOrientationChange | Fires when the screen's orientation changes |
 
 
 #### Methods
 
-<table>
-    <tr>
-        <td>ValueTask RegisterEventHandlers()</td>
-        <td>Register event handlers</td>
-    </tr>
-    <tr>
-        <td>ValueTask AlertAsync(string)</td>
-        <td>Alerts the user with the given message</td>
-    </tr>
-    <tr>
-        <td>ValueTask&lt;string&gt; PromptAsync(string)</td>
-        <td>Prompts the user with the given message</td>
-    </tr>
-    <tr>
-        <td>ValueTask FocusAsync()</td>
-        <td>Focuses the window</td>
-    </tr>
-    <tr>
-        <td>ValueTask BlurAsync()</td>
-        <td>Blurs focus on the window</td>
-    </tr>
-    <tr>
-        <td>ValueTask LogToConsoleAsync(string)</td>
-        <td>Logs the given message to the console</td>
-    </tr>
-    <tr>
-        <td>ValueTask StartConsoleTimerAsync(string)</td>
-        <td>Starts a console timer with the given label</td>
-    </tr>
-    <tr>
-        <td>ValueTask LogConsoleTimerAsync(string)</td>
-        <td>Logs the console timer with the given label</td>
-    </tr>
-    <tr>
-        <td>ValueTask StopConsoleTimerAsync(string)</td>
-        <td>Stops a console timer with the given label</td>
-    </tr>
-    <tr>
-        <td>ValueTask&lt;Screen&gt; GetScreenAsync()</td>
-        <td>Gets the Screen object</td>
-    </tr>
-    <tr>
-        <td>ValueTask&lt;WindowDimensions&gt; GetDimensionsAsync()</td>
-        <td>Gets the WindowDimensions object</td>
-    </tr>
-    <tr>
-        <td>ValueTask&lt;Theme&gt; GetThemeAsync(string)</td>
-        <td>Gets the Theme object</td>
-    </tr>
-    <tr>
-        <td>ValueTask ScrollToAsync(int, int)</td>
-        <td>Scrolls the window to the given position</td>
-    </tr>
-    <tr>
-        <td>ValueTask&lt;bool&gt; MatchesMediaAsync(string)</td>
-        <td>Matches the given media query</td>
-    </tr>
-</table>
+|  |  |
+|---|---|
+| ValueTask RegisterEventHandlers() | Register event handlers |
+| ValueTask AlertAsync(string) | Alerts the user with the given message |
+| ValueTask<string> PromptAsync(string) | Prompts the user with the given message |
+| ValueTask FocusAsync() | Focuses the window |
+| ValueTask BlurAsync() | Blurs focus on the window |
+| ValueTask LogToConsoleAsync(string) | Logs the given message to the console |
+| ValueTask StartConsoleTimerAsync(string) | Starts a console timer with the given label |
+| ValueTask LogConsoleTimerAsync(string) | Logs the console timer with the given label |
+| ValueTask StopConsoleTimerAsync(string) | Stops a console timer with the given label |
+| ValueTask<Screen> GetScreenAsync() | Gets the Screen object |
+| ValueTask<WindowDimensions> GetDimensionsAsync() | Gets the WindowDimensions object |
+| ValueTask<Theme> GetThemeAsync(string) | Gets the Theme object |
+| ValueTask ScrollToAsync(int, int) | Scrolls the window to the given position |
+| ValueTask<bool> MatchesMediaAsync(string) | Matches the given media query |
 
 
 ### ElementHandler
 
-Namespace: Blazor.JSInterop.Helpers.Services</br>
+Namespace: Blazor.JSInterop.Helpers.Services\
 Inheritance: IElementHandler &#8594; ElementHandler
 
 Contains methods to interact with the DOM's Element API.
 
 #### Methods
 
-<table>
-    <tr>
-        <td>ValueTask FocusAsync(ElementReference)</td>
-        <td>Sets focus on the given element</td>
-    </tr>
-    <tr>
-        <td>ValueTask BlurAsync(ElementReference)</td>
-        <td>Blurs focus on the given element</td>
-    </tr>
-    <tr>
-        <td>ValueTask&lt;T&gt; GetPropertyAsync(ElementReference, string)</td>
-        <td>Gets the value of the given element's property</td>
-    </tr>
-    <tr>
-        <td>ValueTask SetPropertyAsync(ElementReference, string, string)</td>
-        <td>Sets the specified value on the given element's property</td>
-    </tr>
-    <tr>
-        <td>ValueTask&lt;T&gt; GetStyleAsync(ElementReference, string)</td>
-        <td>Gets the value of the given element's style property</td>
-    </tr>
-    <tr>
-        <td>ValueTask SetStyleAsync(ElementReference, string, string)</td>
-        <td>Sets the specified value on the given element's style property</td>
-    </tr>
-    <tr>
-        <td>ValueTask AddClassAsync(ElementReference, string)</td>
-        <td>Adds a class to the given element</td>
-    </tr>
-    <tr>
-        <td>ValueTask ToggleClassAsync(ElementReference, string)</td>
-        <td>Toggles a class on the given element</td>
-    </tr>
-    <tr>
-        <td>ValueTask RemoveClassAsync(ElementReference, string)</td>
-        <td>Removes a class on the given element</td>
-    </tr>
-</table>
+|  |  |
+|---|---|
+| ValueTask FocusAsync(ElementReference) | Sets focus on the given element |
+| ValueTask BlurAsync(ElementReference) | Blurs focus on the given element |
+| ValueTask<T> GetPropertyAsync(ElementReference, string) | Gets the value of the given element's property |
+| ValueTask SetPropertyAsync(ElementReference, string, string) | Sets the specified value on the given element's property |
+| ValueTask<T> GetStyleAsync(ElementReference, string) | Gets the value of the given element's style property |
+| ValueTask SetStyleAsync(ElementReference, string, string) | Sets the specified value on the given element's style property |
+| ValueTask AddClassAsync(ElementReference, string) | Adds a class to the given element |
+| ValueTask ToggleClassAsync(ElementReference, string) | Toggles a class on the given element |
+| ValueTask RemoveClassAsync(ElementReference, string) | Removes a class on the given element |
 
 ### Examples
 
