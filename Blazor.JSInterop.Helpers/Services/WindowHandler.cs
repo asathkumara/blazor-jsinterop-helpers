@@ -11,14 +11,16 @@ namespace Blazor.JSInterop.Helpers.Services
     public class WindowHandler : IWindowHandler, IAsyncDisposable
     {
         private readonly Lazy<Task<IJSObjectReference>> _windowHandlerModule;
+        private readonly string scriptPath = "_content/Blazor.JSInterop.Helpers/scripts/windowHandler.min.js";
 
         public event EventHandler<WindowEventArgs> OnResize;
         public event EventHandler<WindowEventArgs> OnOrientationChange;
 
-        public WindowHandler(IJSRuntime jsRuntime)
+        public WindowHandler(IJSRuntime jsRuntime, NavigationManager navigationManager)
         {
+            var path = navigationManager.ToAbsoluteUri(scriptPath);
             _windowHandlerModule = new(() => jsRuntime.InvokeAsync<IJSObjectReference>(
-                "import", "./_content/Blazor.JSInterop.Helpers/windowHandler.js").AsTask());
+                "import", path).AsTask());
         }
 
         /// <summary>

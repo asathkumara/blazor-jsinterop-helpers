@@ -10,11 +10,13 @@ namespace Blazor.JSInterop.Helpers.Services
     public class ElementHandler : IElementHandler, IAsyncDisposable
     {
         private readonly Lazy<Task<IJSObjectReference>> _elementHandlerModule;
+        private readonly string scriptPath = "_content/Blazor.JSInterop.Helpers/scripts/elementHandler.min.js";
 
-        public ElementHandler(IJSRuntime jsRuntime)
+        public ElementHandler(IJSRuntime jsRuntime, NavigationManager navigationManager)
         {
+            var path = navigationManager.ToAbsoluteUri(scriptPath);
             _elementHandlerModule = new(() => jsRuntime.InvokeAsync<IJSObjectReference>(
-                "import", "./_content/Blazor.JSInterop.Helpers/elementHandler.js").AsTask());
+                "import", path).AsTask());
         }
 
         /// <summary>
