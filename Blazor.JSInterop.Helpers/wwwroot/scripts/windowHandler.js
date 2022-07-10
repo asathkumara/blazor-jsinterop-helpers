@@ -1,6 +1,4 @@
 ﻿export const onResize = (dotnetObjectReference) => {
-    console.log("Invoked onResize");
-
     dotnetObjectReference.invokeMethodAsync("OnResizeNotifier", {
         windowDimensions: getWindowDimensions(),
         screen: getScreen()
@@ -8,8 +6,6 @@
 }
 
 export const onOrientationChange = (dotnetObjectReference) => {
-    console.log("Invoked onOrientationChange");
-
     dotnetObjectReference.invokeMethodAsync("OnOrientationChangeNotifier", {
         windowDimensions: getWindowDimensions(),
         screen: getScreen()
@@ -99,7 +95,3 @@ export const getScreenWidth = () => {
 export const getScreenOrientation = () => {
     return window.screen.orientation.type;
 }
-
-// Window event subscriptions
-
-//window.onresize = onResize;
