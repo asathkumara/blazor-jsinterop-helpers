@@ -182,6 +182,10 @@ publish/
 # in these scripts will be unencrypted
 PublishScripts/
 
+#NuGet Package Content
+Blazor.JSInterop.helpers/README.md
+Blazor.JSInterop.helpers/LICENSE.txt
+
 # NuGet Packages
 *.nupkg
 # NuGet Symbol Packages
