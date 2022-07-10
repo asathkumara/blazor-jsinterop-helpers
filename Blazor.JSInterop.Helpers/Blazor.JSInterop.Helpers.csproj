@@ -15,7 +15,7 @@
     <PackageIcon>blazor-interop-handlers-logo.png</PackageIcon>
     <PackageReleaseNotes>Initial release with Window and Element handlers.</PackageReleaseNotes>
 	  <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
-	  <Version>1.1.0</Version>
+	  <Version>1.1.1</Version>
   </PropertyGroup>
 
   <ItemGroup>

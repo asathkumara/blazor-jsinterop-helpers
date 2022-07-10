@@ -1,6 +1,6 @@
 ![blazor-interop-handlers-banner-700x250](https://user-images.githubusercontent.com/28933557/177880617-3097f9ae-9799-40ad-a5c7-93d9c662f84e.jpg)
 
-![Nuget (with prereleases)](https://img.shields.io/nuget/vpre/Blazor.JSInterop.Helpers?style=plastic)
+[![Nuget (with prereleases)](https://img.shields.io/nuget/vpre/Blazor.JSInterop.Helpers?style=plastic)](https://www.nuget.org/packages/Blazor.JSInterop.Helpers)
 
 ## Table of Contents
 1. [Overview](#overview)
@@ -21,7 +21,7 @@ When building robust and complex razor components using Blazor, interactions wit
 Package Manager
 
 ```powershell
-Install-Package Blazor.JSInterop.Handlers -Version 1.0.1
+Install-Package Blazor.JSInterop.Handlers -Version 1.1.1
 ```
 
 .NET CLI
@@ -33,7 +33,7 @@ dotnet add package Blazor.JSInterop.Handlers
 PackageReference
 
 ```xml
-<PackageReference Include="Blazor.JSInterop.Handlers" Version="1.0.1">
+<PackageReference Include="Blazor.JSInterop.Handlers" Version="1.1.1">
 ```
 
 ## Usage
