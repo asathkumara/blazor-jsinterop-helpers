@@ -1,6 +1,6 @@
 ![blazor-interop-handlers-banner-700x250](https://user-images.githubusercontent.com/28933557/177880617-3097f9ae-9799-40ad-a5c7-93d9c662f84e.jpg)
 
-[![Nuget (with prereleases)](https://img.shields.io/nuget/vpre/Blazor.JSInterop.Helpers?style=plastic)](https://www.nuget.org/packages/Blazor.JSInterop.Helpers)
+[![Nuget (with prereleases)](https://img.shields.io/nuget/vpre/Blazor.JSInterop.Helpers?style=plastic)](https://www.nuget.org/packages/Blazor.JSInterop.Helpers) [![Nuget](https://img.shields.io/nuget/dt/Blazor.JSInterop.Helpers?style=plastic)](https://www.nuget.org/packages/Blazor.JSInterop.Helpers)
 
 ## Table of Contents
 1. [Overview](#overview)
