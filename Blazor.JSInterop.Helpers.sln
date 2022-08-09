@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blazor.JSInterop.Helpers", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blazor.JSInterop.Helpers.Examples", "Blazor.JSInterop.Helpers.Examples\Blazor.JSInterop.Helpers.Examples.csproj", "{94C6169D-A531-4AA8-85FE-840838EF26FD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blazor.JSInterop.Helpers.E2ETests", "Blazor.JSInterop.Helpers.E2ETests\Blazor.JSInterop.Helpers.E2ETests.csproj", "{8A848A03-41F6-4463-A664-4DCC33A37F2C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{94C6169D-A531-4AA8-85FE-840838EF26FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{94C6169D-A531-4AA8-85FE-840838EF26FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{94C6169D-A531-4AA8-85FE-840838EF26FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A848A03-41F6-4463-A664-4DCC33A37F2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A848A03-41F6-4463-A664-4DCC33A37F2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A848A03-41F6-4463-A664-4DCC33A37F2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A848A03-41F6-4463-A664-4DCC33A37F2C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
