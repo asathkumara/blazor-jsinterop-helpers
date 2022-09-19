@@ -1,4 +1,6 @@
-﻿using TechTalk.SpecFlow;
+﻿using Blazor.JSInterop.Helpers.E2ETests.PageObjects;
+using OpenQA.Selenium;
+using TechTalk.SpecFlow;
 
 namespace Blazor.JSInterop.Helpers.E2ETests.Steps
 {
@@ -8,17 +10,38 @@ namespace Blazor.JSInterop.Helpers.E2ETests.Steps
     [Binding]
     public sealed class ElementHandlerStepDefinitions
     {
-        [When("AddClassAsync is called with a class name")]
-        public void GivenAnElement()
+        private readonly IndexPage _indexPage;
+
+        public ElementHandlerStepDefinitions(IWebDriver driver)
         {
-            Assert.AreEqual(1,1);
+            _indexPage = new IndexPage(driver);
+            _indexPage.Open();
         }
 
-        [Then("the class name is added to the element")]
-        public void ThenTheClassNameIsAddedToTheElement()
+        [When("FocusAsync is called on an element")]
+        public void WhenFocusAsyncIsCalled()
         {
-            Assert.AreEqual(1, 1);
+            _indexPage.ClickFocusHeadingOneButton();
+        }
+
+        [Then("the element is focused")]
+        public void ThenTheElementIsFocused()
+        {
+            Assert.That(_indexPage.FocusedElement, Is.EqualTo(_indexPage.HeadingOneElement));
 
         }
+
+        //[When("AddClassAsync is called with a class name")]
+        //public void WhenAddClassAsyncIsCalled()
+        //{
+        //    Assert.AreEqual(1, 1);
+        //}
+
+        //[Then("the class name is added to the element")]
+        //public void ThenTheClassNameIsAdded()
+        //{
+        //    Assert.AreEqual(1, 1);
+
+        //}
     }
 }

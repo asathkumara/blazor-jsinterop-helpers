@@ -1,4 +1,5 @@
 ﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
 
 namespace Blazor.JSInterop.Helpers.E2ETests.PageObjects
 {
@@ -8,11 +9,14 @@ namespace Blazor.JSInterop.Helpers.E2ETests.PageObjects
     public class IndexPage
     {
         private const string IndexUrl = @"https://localhost:7149/";
+        private const int DefaultTimeout = 10;
         private readonly IWebDriver _driver;
 
         private IWindow _window => _driver.Manage().Window;
-        private IWebElement _headingOneElement => _driver.FindElement(By.Id("headingOne"));
-        private IWebElement _focusHeadingButtonElement => _driver.FindElement(By.Id("focusHeadingButton"));
+        public IWebElement HeadingOneElement => _driver.FindElement(By.Id("headingOne"), TimeSpan.FromSeconds(DefaultTimeout));
+        public IWebElement FocusHeadingOneButtonElement => _driver.FindElement(By.Id("focusHeadingButton"), TimeSpan.FromSeconds(DefaultTimeout));
+
+        public IWebElement FocusedElement => _driver.SwitchTo().ActiveElement();
 
         /// <summary>
         /// Constructs the Index page object with the given driver
@@ -33,7 +37,7 @@ namespace Blazor.JSInterop.Helpers.E2ETests.PageObjects
 
         public void ClickFocusHeadingOneButton()
         {
-            _focusHeadingButtonElement.Click();
+            FocusHeadingOneButtonElement.Click();
         }
 
         public void Minimize()

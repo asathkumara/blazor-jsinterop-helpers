@@ -74,13 +74,13 @@ namespace Blazor.JSInterop.Helpers.E2ETests.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Add a class to an element")]
-        public async System.Threading.Tasks.Task AddAClassToAnElement()
+        [NUnit.Framework.DescriptionAttribute("Focus an element")]
+        public async System.Threading.Tasks.Task FocusAnElement()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add a class to an element", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 5
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Focus an element", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 9
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -90,11 +90,11 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 await this.ScenarioStartAsync();
-#line 6
- await testRunner.WhenAsync("AddClassAsync is called with a class name", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 10
+ await testRunner.WhenAsync("FocusAsync is called on an element", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 7
- await testRunner.ThenAsync("the class name is added to the element", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 11
+ await testRunner.ThenAsync("the element is focused", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             await this.ScenarioCleanupAsync();
