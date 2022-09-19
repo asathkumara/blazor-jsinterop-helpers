@@ -1,4 +1,4 @@
-![blazor-interop-handlers-banner-700x250](https://user-images.githubusercontent.com/28933557/177880617-3097f9ae-9799-40ad-a5c7-93d9c662f84e.jpg)
+![Readme-Banner-1200x300](https://user-images.githubusercontent.com/28933557/185797451-14bc37bd-1ea9-4581-a1f9-fc6770d5cbe3.png)
 
 [![Nuget (with prereleases)](https://img.shields.io/nuget/vpre/Blazor.JSInterop.Helpers?style=plastic)](https://www.nuget.org/packages/Blazor.JSInterop.Helpers) [![Nuget](https://img.shields.io/nuget/dt/Blazor.JSInterop.Helpers?style=plastic)](https://www.nuget.org/packages/Blazor.JSInterop.Helpers)
 
